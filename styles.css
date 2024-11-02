@@ -1,0 +1,509 @@
+/* Variáveis CSS para cores */
+:root {
+    --primary-color: #0a1931;
+    --secondary-color: #ffc107;
+    --light-background: #f4f4f4;
+    --white: #fff;
+    --dark-gray: #333;
+    --light-gray: #f9f9f9;
+    --hover-background: #f1f1f1;
+    --table-header-color: #959aa0;
+    --table-border-color: #dee2e6;
+}
+
+/* Fontes e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: var(--light-background);
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.header nav ul li {
+    margin-left: 1.5rem;
+}
+
+.header nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cta-btn {
+    background-color: var(--secondary-color);
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    color: var(--primary-color);
+}
+
+/* Seção Hero */
+.hero {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero .btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+    background-color: var(--dark-gray);
+}
+
+/* Seção Features */
+.features-section {
+    padding: 4rem 0;
+    background-color: var(--white);
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 30%;
+    background-color: var(--light-gray);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 2rem;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature h3 {
+    margin-top: 1rem;
+}
+
+.icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+
+/* Seção Comparação */
+.comparison-section {
+    background-color: var(--light-background);
+    padding: 4rem 0;
+}
+
+.comparison-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+    padding: 1rem;
+    border: 1px solid var(--table-border-color);
+}
+
+.header .table-cell {
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Seção Contato */
+.contact-section {
+    background-color: var(--white);
+    padding: 4rem 0;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--table-border-color);
+    border-radius: 5px;
+}
+
+.contact-section button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: var(--dark-gray);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estilo da Tabela */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 15px;
+    border: 1px solid var(--table-border-color);
+    text-align: center;
+}
+
+th {
+    background-color: var(--table-header-color);
+    color: var(--white);
+}
+
+tr:hover {
+    background-color: var(--hover-background);
+}
+
+.table-primary {
+    background-color: #4f6d9b; /* Cor de fundo dos cabeçalhos */
+    color: var(--white);
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para melhor legibilidade */
+    padding: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #4f6d9b; /* Cor personalizada para os ícones */
+    border-radius: 50%; /* Ícones arredondados */
+}
+
+.carousel-item img {
+    max-height: 600px; /* Define a altura máxima da imagem */
+    width: 100%; /* Mantém a largura em 100% */
+    object-fit: cover; /* Faz com que a imagem cubra o espaço sem distorção */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    .comparison-table .table-cell {
+        font-size: 0.9rem;
+    }
+
+    .header .container {
+        flex-direction: column;
+    }
+
+    .header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header nav ul li {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+    }
+
+    .feature {
+        width: 100%;
+    }
+
+    .comparison-table .table-cell {
+        font-size: 0.85rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        padding: 1.5rem 0;
+    }
+
+    .header .container {
+        flex-direction: column;
+    }
+
+    .header nav ul {
+        flex-direction: column;
+    }
+
+    .header nav ul li {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero .btn-primary {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .comparison-table .table-cell {
+        font-size: 0.75rem;
+    }
+
+    .comparison-section {
+        padding: 2rem 0;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa; /* Cor de fundo suave */
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 600px; /* Largura máxima do contêiner */
+        margin: auto; /* Centraliza o contêiner */
+        background: white; /* Fundo branco para o contêiner */
+        border-radius: 8px; /* Bordas arredondadas */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        padding: 20px; /* Espaçamento interno */
+    }
+    ul {
+        list-style-type: none; /* Remove os marcadores da lista */
+        padding: 0;
+    }
+    li {
+        margin: 10px 0; /* Espaçamento entre os itens da lista */
+        font-size: 18px; /* Tamanho da fonte */
+        display: flex; /* Usar flexbox para alinhar ícones e texto */
+        align-items: center; /* Alinhar verticalmente */
+    }
+    i {
+        margin-right: 10px; /* Espaçamento entre ícone e texto */
+        color: #007bff; /* Cor dos ícones */
+    }
+    .container {
+        max-width: 600px; /* Largura máxima do contêiner */
+        margin: auto; /* Centraliza o contêiner */
+        background: white; /* Fundo branco para o contêiner */
+        border-radius: 8px; /* Bordas arredondadas */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        padding: 20px; /* Espaçamento interno */
+    }
+    .icon {
+        width: 32px; /* Largura do ícone */
+        height: 32px; /* Altura do ícone */
+    }
+    h1 {
+        color: #007bff; /* Cor do título */
+    }
+    .container {
+    max-width: 600px; /* Largura máxima do contêiner */
+    margin: auto; /* Centraliza o contêiner */
+    background: #f8f9fa; /* Fundo claro para o contêiner */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 30px; /* Espaçamento interno */
+    transition: box-shadow 0.3s ease; /* Transição suave para efeito hover */
+}
+
+.icon-container {
+    display: flex; /* Usa flexbox para o layout */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
+    justify-content: center; /* Centraliza os itens */
+}
+
+.icon-item {
+    margin: 10px; /* Espaçamento entre os itens */
+    text-align: center; /* Centraliza o texto sob os ícones */
+    width: 80px; /* Largura do item do ícone */
+}
+
+.img-with-animation {
+    width: 60px; /* Ajuste o tamanho dos ícones */
+    height: 60px; /* Ajuste o tamanho dos ícones */
+    object-fit: cover; /* Para garantir que a imagem se ajuste corretamente */
+}
+
+h1 {
+    color: #007bff; /* Cor do título */
+    font-size: 1.8rem; /* Tamanho do título */
+    font-weight: bold; /* Peso do título */
+    margin-bottom: 20px; /* Espaçamento inferior do título */
+}
+
+p {
+    margin-top: 5px; /* Espaçamento acima do texto */
+    font-size: 0.9rem; /* Tamanho do texto */
+    color: #333; /* Cor do texto */
+}
+.container {
+    max-width: 600px; /* Largura máxima do contêiner */
+    margin: auto; /* Centraliza o contêiner */
+    background: #f8f9fa; /* Fundo claro para o contêiner */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 30px; /* Espaçamento interno */
+    transition: box-shadow 0.3s ease; /* Transição suave para efeito hover */
+}
+
+.icon-container {
+    display: flex; /* Usa flexbox para o layout */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
+    justify-content: center; /* Centraliza os itens */
+}
+
+.icon-item {
+    margin: 10px; /* Espaçamento entre os itens */
+    text-align: center; /* Centraliza o texto sob os ícones */
+    width: 106px; /* Largura do item do ícone */
+}
+
+.img-with-animation {
+    width: 106px; /* Ajuste o tamanho dos ícones */
+    height: 90px; /* Ajuste o tamanho dos ícones */
+    object-fit: cover; /* Para garantir que a imagem se ajuste corretamente */
+}
+
+h1 {
+    color: #007bff; /* Cor do título */
+    font-size: 1.8rem; /* Tamanho do título */
+    font-weight: bold; /* Peso do título */
+    margin-bottom: 20px; /* Espaçamento inferior do título */
+}
+
+p {
+    margin-top: 5px; /* Espaçamento acima do texto */
+    font-size: 0.9rem; /* Tamanho do texto */
+    color: #333; /* Cor do texto */
+}
+
+.container {
+    max-width: 600px; /* Largura máxima do contêiner */
+    margin: auto; /* Centraliza o contêiner */
+    background: #f8f9fa; /* Fundo claro para o contêiner */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 30px; /* Espaçamento interno */
+    transition: box-shadow 0.3s ease; /* Transição suave para efeito hover */
+}
+
+.icon-container {
+    display: flex; /* Usa flexbox para o layout */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
+    justify-content: center; /* Centraliza os itens */
+}
+
+.icon-item {
+    margin: 10px; /* Espaçamento entre os itens */
+    text-align: center; /* Centraliza o texto sob os ícones */
+    width: 106px; /* Largura do item do ícone */
+}
+
+.img-with-animation {
+    width: 106px; /* Ajuste o tamanho dos ícones */
+    height: 90px; /* Ajuste o tamanho dos ícones */
+    object-fit: cover; /* Para garantir que a imagem se ajuste corretamente */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    max-height: 100%; /* Garante que a imagem não ultrapasse a altura do contêiner */
+}
+
+h1 {
+    color: #007bff; /* Cor do título */
+    font-size: 1.8rem; /* Tamanho do título */
+    font-weight: bold; /* Peso do título */
+    margin-bottom: 20px; /* Espaçamento inferior do título */
+}
+
+p {
+    margin-top: 5px; /* Espaçamento acima do texto */
+    font-size: 0.9rem; /* Tamanho do texto */
+    color: #333; /* Cor do texto */
+}
+/* Defina um tamanho fixo para todas as imagens na seção de funcionalidades */
+.featurette-image {
+    width: 100%; /* Ajuste para que a imagem ocupe 100% da largura da coluna */
+    max-width: 400px; /* Tamanho máximo das imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Faz com que a imagem se ajuste ao tamanho sem distorcer */
+}
+
+}
